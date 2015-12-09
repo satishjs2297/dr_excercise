@@ -21,7 +21,7 @@ public class WordFrequenceSvcTest {
 
 		JacksonJsonParser jsonParser = new JacksonJsonParser();
 		try (BufferedReader bReader = new BufferedReader(
-				new FileReader(System.getProperty("user.dir") + "/arc-response-2015 Dec 8 11-54-33.json"));) {
+				new FileReader(System.getProperty("user.dir") + "/arc-response.json"));) {
 			String str = null;
 			StringBuilder stBuilder = new StringBuilder();
 			while ((str = bReader.readLine()) != null) {

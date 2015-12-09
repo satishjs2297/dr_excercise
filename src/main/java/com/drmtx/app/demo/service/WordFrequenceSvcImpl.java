@@ -79,7 +79,7 @@ public class WordFrequenceSvcImpl implements WordFrequenceSvc {
 
 		List<WordFrequency> wordFrequencyLst = wordFrequenceDAO.getWordFrequencyById(id, count);
 
-		LOG.info("wordFrequencyLst :: {}", wordFrequencyLst);
+		LOG.debug("wordFrequencyLst :: {}", wordFrequencyLst);
 		List<WordFrequencyResp> wordFreqRespLst = new ArrayList<WordFrequencyResp>();
 		for (WordFrequency wordFreq : wordFrequencyLst) {
 			WordFrequencyResp wordFreqResp = new WordFrequencyResp();

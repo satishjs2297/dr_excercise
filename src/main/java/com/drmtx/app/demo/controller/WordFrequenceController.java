@@ -61,18 +61,18 @@ public class WordFrequenceController {
 	@RequestMapping(value = "/{id}")
 	public List<WordFrequencyResp> getWordFrequency(@PathVariable("id") Long id,
 			@RequestParam(value = "count") Integer count) {
-		List<WordFrequencyResp> wordFrequencyById = null;
+		List<WordFrequencyResp> wordFrequencyRespLst = null;
 		try {
 			LOG.debug(" id :: {} and count :: {} ", id, count);
-			wordFrequencyById = wordFrequenceSvc.getWordFrequencyById(id, count);
+			wordFrequencyRespLst = wordFrequenceSvc.getWordFrequencyById(id, count);
 
-			LOG.info("wordFrequencyById :: {}", wordFrequencyById);
+			LOG.debug("wordFrequencyById :: {}", wordFrequencyRespLst);
 
 		} catch (Exception ex) {
 			LOG.error("getWordFrequency @ Error :: {}", ex.getMessage());
 		}
 
-		return wordFrequencyById;
+		return wordFrequencyRespLst;
 	}
 
 }

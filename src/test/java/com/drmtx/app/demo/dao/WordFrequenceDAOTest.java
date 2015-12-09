@@ -7,24 +7,24 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
+import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.drmtx.app.TaskRunnerApp;
 import com.drmtx.app.demo.model.WordFrequency;
-
-import org.junit.Assert;
 
 /**
  * @author Accolite
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath:spring-jpa-config.xml"})
+@SpringApplicationConfiguration(classes=TaskRunnerApp.class)
 public class WordFrequenceDAOTest {
 	
 	@Autowired
